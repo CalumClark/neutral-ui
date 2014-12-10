@@ -1,9 +1,4 @@
-// TODO move variables to their own file
-// Cards
-$card-light-background: #fff;
-
-// Depth
-$depth-default: 1; // TODO change to "depth-default-z-index" or similar? Is depth too vague?
+@import "../variables";
 
 @mixin card($background: $card-light-background, $depth: $depth-default) {
   background: $background;
