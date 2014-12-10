@@ -1,0 +1,26 @@
+// TODO move variables to their own file
+// Cards
+$card-light-background: #fff;
+
+// Depth
+$depth-default: 1; // TODO change to "depth-default-z-index" or similar? Is depth too vague?
+
+@mixin card($background: $card-light-background, $depth: $depth-default) {
+  background: $background;
+  // TODO predefine padding value using variable (not 24px)
+  padding: 24px;
+
+  // Depth (elevation)
+  // 0 = lowest
+  // TODO make this a mixin itself? depth can be applied to non-cards after all.
+  @if $depth == 0 {
+    box-shadow: 0;
+  } @else if $depth == 1 {
+    // TODO make th is more math-based for levels
+    // i.e. $depth multiplied by some base values
+    box-shadow: 0 2px 5px 0 rgba(#000, 0.26);
+  }
+}
+.card {
+  @include card();
+}
