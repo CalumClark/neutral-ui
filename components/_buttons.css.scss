@@ -2,6 +2,7 @@
 @import "../mixins/depth";
 
 /* Base button */
+// TODO make a base button for raised/flat to use.
 
 /* Flat buttons */
 @mixin button-flat($type: default) {
