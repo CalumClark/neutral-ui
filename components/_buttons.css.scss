@@ -17,6 +17,7 @@
   vertical-align: middle;
   overflow: hidden;
   padding: 0 1em;
+  border-radius: $border-radius;
   color: $text-color;
   line-height: 2;
   transition: all 250ms cubic-bezier(0.190, 1.000, 0.220, 1.000);
@@ -54,6 +55,7 @@
   vertical-align: middle;
   overflow: hidden;
   padding: 0 1em;
+  border-radius: $border-radius;
   color: $text-color;
   line-height: 2;
   background: $background;
