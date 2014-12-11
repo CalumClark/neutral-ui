@@ -1,6 +1,18 @@
-// TODO move variables to their own file
+// Default colors
+$primary-color: #ff4081;
+
+// Default sizes
+$border-radius: 2px;
+
+// Text
+$text-color: #444;
+
 // Cards
 $card-light-background: #fff;
 
 // Depth
 $depth-default: 1; // TODO change to "depth-default-z-index" or similar? Is depth too vague?
+
+// Buttons
+$button-flat-default-hover-background: lighten($text-color, 60%); // TODO consistent color palette
+$button-flat-primary-hover-background: lighten($primary-color, 30%); // TODO consistent color palette
