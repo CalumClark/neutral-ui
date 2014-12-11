@@ -1,12 +1,13 @@
 @import "../variables";
 @import "../mixins/depth";
 
-@mixin card($background: $card-light-background, $level: $depth-level-default) {
+@mixin toolbar($background: $card-light-background, $level: $depth-level-default) {
   background: $background;
-  // TODO predefine padding value using variable (not 24px)
   padding: $vertical-margin $horizontal-margin;
   @include depth($level: $depth-level-default);
+
+  // TODO light and dark versions? (bg, text)
 }
-.nui-card {
-  @include card();
+.nui-toolbar {
+  @include toolbar();
 }
