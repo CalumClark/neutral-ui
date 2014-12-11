@@ -11,8 +11,15 @@ $text-color: #444;
 $card-light-background: #fff;
 
 // Depth
-$depth-default: 1; // TODO change to "depth-default-z-index" or similar? Is depth too vague?
+$depth-level-default: 1;
 
 // Buttons
 $button-flat-default-hover-background: lighten($text-color, 60%); // TODO consistent color palette
 $button-flat-primary-hover-background: lighten($primary-color, 30%); // TODO consistent color palette
+
+$button-raised-default-background: $card-light-background; // TODO consistent color palette
+$button-raised-primary-background: $primary-color; // TODO consistent color palette
+$button-raised-default-hover-background: lighten($text-color, 60%); // TODO consistent color palette
+$button-raised-primary-hover-background: darken($primary-color, 10%); // TODO consistent color palette
+$button-raised-default-text-color: $text-color; // TODO consistent color palette
+$button-raised-primary-text-color: #fff; // TODO consistent color palette

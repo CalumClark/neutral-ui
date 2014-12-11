@@ -1,24 +1,33 @@
 @import "../variables";
+@import "../mixins/depth";
 
+/* Base button */
+
+/* Flat buttons */
 @mixin button-flat($type: default) {
-  $color: $text-color;
+  $text-color: $text-color;
   $hover-background: $button-flat-default-hover-background;
 
   @if $type == primary {
-    $color: $primary-color;
+    $text-color: $primary-color;
     $hover-background: $button-flat-primary-hover-background;
   }
 
   display: inline-block;
   overflow: hidden;
   padding: 0 1em;
-  color: $color;
+  color: $text-color;
   line-height: 2;
-  transition: background 250ms cubic-bezier(0.190, 1.000, 0.220, 1.000);
+  transition: all 250ms cubic-bezier(0.190, 1.000, 0.220, 1.000);
 
+  &:hover, &:focus {
+    color: $text-color;
+  }
   &:hover {
-    color: $color;
     background: $hover-background;
+  }
+  &:focus {
+    text-decoration: none;
   }
 }
 .nui-button-flat-default {
@@ -26,4 +35,45 @@
 }
 .nui-button-flat-primary {
   @include button-flat($type: primary);
+}
+
+/* Raised buttons */
+@mixin button-raised($type: default) {
+  $text-color: $button-raised-default-text-color;
+  $background: $button-raised-default-background;
+  $hover-background: $button-raised-default-hover-background;
+
+  @if $type == primary {
+    $text-color: $button-raised-primary-text-color;
+    $hover-background: $button-raised-primary-hover-background;
+    $background: $button-raised-primary-background;
+  }
+
+  display: inline-block;
+  overflow: hidden;
+  padding: 0 1em;
+  color: $text-color;
+  line-height: 2;
+  background: $background;
+  @include depth($level: $depth-level-default);
+  transition: all 250ms cubic-bezier(0.190, 1.000, 0.220, 1.000);
+
+  &:hover, &:focus {
+    color: $text-color;
+  }
+  &:hover {
+    background: $hover-background;
+  }
+  &:focus {
+    text-decoration: none;
+  }
+  &:active {
+    @include depth($level: 2);
+  }
+}
+.nui-button-raised-default {
+  @include button-raised($type: default);
+}
+.nui-button-raised-primary {
+  @include button-raised($type: primary);
 }
