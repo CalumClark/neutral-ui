@@ -2,11 +2,26 @@
 @import "../mixins/depth";
 
 @mixin card($background: $card-light-background, $level: $depth-level-default) {
-  padding: $vertical-margin $horizontal-margin;
   overflow: none; // To reduce 'leakage' from children due to border-radius
   border-radius: $border-radius;
   background: $background;
   @include depth($level: $depth-level-default);
+
+  .card-body {
+    padding: $vertical-margin $horizontal-margin;
+  }
+  .card-divider {
+    $border-color: null;
+
+    @if lightness($background) < 50% {
+      // Then the background is dark, we need a lighter line
+      $border-color: lighten($background, 10%);
+    } @else {
+      // Then the background is dark, we need a darker line
+      $border-color: darken($background, 10%);
+    }
+    border-top: 1px solid $border-color;
+  }
 }
 .nui-card {
   @include card();
