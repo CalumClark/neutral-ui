@@ -1,28 +1,32 @@
-// Default colors
+/* Default colors */
 $primary-color: #ff4081;
 
-// Default sizes
+/* Default sizes */
 $border-radius: 2px;
 $horizontal-margin: 16px;
 $vertical-margin: 16px;
 
-// Text
+/* Text */
 $text-color: #444;
 
-// Cards
+/* Cards */
 $card-light-background: #fff;
 $card-dark-background: #212121;
 
-// Depth
+/* Depth */
 $depth-level-default: 1;
 
-// Buttons
+/* Buttons */
+// Flat
 $button-flat-default-hover-background: lighten($text-color, 60%); // TODO consistent color palette
 $button-flat-primary-hover-background: lighten($primary-color, 30%); // TODO consistent color palette
-
+// Raised
 $button-raised-default-background: $card-light-background; // TODO consistent color palette
 $button-raised-primary-background: $primary-color; // TODO consistent color palette
 $button-raised-default-hover-background: lighten($text-color, 60%); // TODO consistent color palette
 $button-raised-primary-hover-background: darken($primary-color, 10%); // TODO consistent color palette
 $button-raised-default-text-color: $text-color; // TODO consistent color palette
 $button-raised-primary-text-color: #fff; // TODO consistent color palette
+
+/* Toolbars */
+$toolbar-height: 48px; // TODO determine value, don't hardcode it

@@ -14,6 +14,7 @@
   > [class^="toolbar"] {
     display: inline-block;
     vertical-align: middle;
+    line-height: $toolbar-height;
   }
   .toolbar-drawer-toggle {
     margin-right: $horizontal-margin;
