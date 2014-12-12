@@ -6,7 +6,7 @@
   } @else if $level == 1 {
     // TODO make th is more math-based for levels
     // i.e. $level multiplied by some base values
-    box-shadow: 0 2px 5px 0 rgba(#000, 0.26);
+    box-shadow: 0 2px 6px 0 rgba(#000, 0.26);
   } @else if $level == 2 {
     // TODO make th is more math-based for levels
     // i.e. $level multiplied by some base values
