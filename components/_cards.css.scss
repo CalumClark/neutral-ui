@@ -2,9 +2,10 @@
 @import "../mixins/depth";
 
 @mixin card($background: $card-light-background, $level: $depth-level-default) {
-  background: $background;
-  // TODO predefine padding value using variable (not 24px)
   padding: $vertical-margin $horizontal-margin;
+  overflow: none; // To reduce 'leakage' from children due to border-radius
+  border-radius: $border-radius;
+  background: $background;
   @include depth($level: $depth-level-default);
 }
 .nui-card {

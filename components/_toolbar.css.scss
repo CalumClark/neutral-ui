@@ -10,4 +10,15 @@
 }
 .nui-toolbar {
   @include toolbar();
+
+  > [class^="toolbar"] {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .toolbar-drawer-toggle {
+    margin-right: $horizontal-margin;
+  }
+  .toolbar-title {
+    font-size: 22px;
+  }
 }
