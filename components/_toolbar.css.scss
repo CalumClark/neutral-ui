@@ -3,7 +3,7 @@
 
 @mixin toolbar($background: $card-light-background, $level: $depth-level-default) {
   background: $background;
-  padding: $vertical-margin $horizontal-margin;
+  padding: 0 $horizontal-margin;
   @include depth($level: $depth-level-default);
 
   // TODO light and dark versions? (bg, text)
@@ -17,7 +17,10 @@
     line-height: $toolbar-height;
   }
   .toolbar-drawer-toggle {
-    margin-right: $horizontal-margin;
+    width: $toolbar-height;
+    height: $toolbar-height;
+    margin-left: -$horizontal-margin;
+    text-align: center;
   }
   .toolbar-title {
     font-size: 22px;
