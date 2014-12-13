@@ -5,4 +5,4 @@ This is a fancy SCSS library/framework. It's starting off modeled after Material
 
 Screenshot from 2014-12-12
 ![alt tag](http://i.imgur.com/lE80eaQ.png)
-![alt tag](http://i.imgur.com/5pIILZO.png)
+![alt tag](http://i.imgur.com/PovSQmn.png)
