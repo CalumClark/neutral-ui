@@ -1,0 +1,65 @@
+@import "../variables";
+
+@mixin toggle() {
+  width: 32px; // TODO best way to handle width? variable? calculation?
+  height: $text-size; // TODO best way to handle width? variable? calculation?
+
+  input[type="checkbox"] {
+    position: absolute;
+    margin-left:-9999px;
+    visibility: hidden;
+
+    &:checked {
+      + .toggle {
+        color: green;
+
+        &::before {
+          background: green;
+        }
+        &::after {
+          left: 100%;
+          background: green;
+          border-color: green;
+        }
+      }
+    }
+  }
+  // 'Default' and 'off' states.
+  .toggle {
+    display: block;
+    position: relative;
+    color: red;
+    cursor: pointer;
+    transition: all 1s;
+    width: 32px; // TODO best way to handle width? variable? calculation?
+    height: $text-size; // TODO best way to handle width? variable? calculation?
+
+    // TODO fix the positioning... the ball doesn't slide equidistant/placement on to off.
+    &::before, &::after {
+      content: " ";
+      transition: all 400ms; // TODO variable-ize
+    }
+    &::before {
+      display: block;
+      position: absolute;
+      top: ($text-size/2)-1;
+      width: 100%;
+      height: 1px;
+      background: #ddd;
+    }
+    &::after {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 15px;
+      height: 15px;
+      background: #fff;
+      border: 2px solid #ddd;
+      border-radius: 15px;
+    }
+  }
+}
+.nui-toggle {
+  @include toggle();
+}
