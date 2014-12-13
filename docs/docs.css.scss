@@ -8,8 +8,8 @@ body {
 // TODO a more elegant way of colorizing toolbars 
 // TODO a more elegant way of styling stuff for docs
 .nui-toolbar {
-  background: #000;
-  color: #ddd;
+  background: $primary-color;
+  color: #f2f2f2;
 
   .toolbar-title {
   }
