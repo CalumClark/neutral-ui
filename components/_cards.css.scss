@@ -10,6 +10,9 @@
   .card-body {
     padding: $vertical-margin $horizontal-margin;
   }
+  .card-title {
+    font-size: 1.5*$text-size; // TODO something more rational... golden ratio for typography?
+  }
   .card-divider {
     $border-color: null;
 

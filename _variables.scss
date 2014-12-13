@@ -8,13 +8,14 @@ $vertical-margin: 16px;
 
 /* Text */
 $text-color: #444;
+$text-size: 16px; // TODO $font-size instead?
 
 /* Cards */
 $card-light-background: #fff;
 $card-dark-background: #212121;
 
 /* Depth */
-$depth-level-default: 1;
+$depth-level-default: 1; // TODO is "default" necessary here, or potentially confusing?
 
 /* Buttons */
 // Flat
