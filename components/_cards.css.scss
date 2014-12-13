@@ -10,9 +10,18 @@
   .card-body {
     padding: $vertical-margin $horizontal-margin;
   }
+  .card-title, .card-subtitle {
+    + * { // TODO revisit; not sure I like this.
+      margin-top: $vertical-margin;
+    }
+  }
   .card-title {
     font-size: 1.5*$text-size; // TODO something more rational... golden ratio for typography?
-    margin-bottom: $vertical-margin;
+  }
+  .card-subtitle {
+    color: lighten($text-color, 10%); // TODO how should I setup the color / sizing / whitespace for this?
+    font-size: 1.3*$text-size; // TODO something more rational... golden ratio for typography?
+    margin-top: $vertical-margin;
   }
   .card-divider {
     $border-color: null;

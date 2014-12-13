@@ -32,7 +32,7 @@
     color: red;
     cursor: pointer;
     transition: all 1s;
-    width: 32px; // TODO best way to handle width? variable? calculation?
+    width: 50px; // TODO best way to handle width? variable? calculation?
     height: $text-size; // TODO best way to handle width? variable? calculation?
 
     &::before, &::after {

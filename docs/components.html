@@ -80,17 +80,13 @@
     <div class="nui-card">
       <div class="card-body">
         <h1 class="card-title">Cards</h1>
-        <p>Sweet toggles and stuff</p>
-      </div>
-
-      <div class="card-body">
-        This is a <code>.card-body</code>. Below is a <code>.card-divider</code>, then another <code>.card-body</code>.
+        <p>This is a <code>.card-body</code>. Above is a <code>.card-title</code>. Below is a <code>.card-divider</code>, then another <code>.card-body</code>.</p>
       </div>
 
       <div class="card-divider"></div>
 
       <div class="card-body">
-        This is another <code>.card-body</code>. It is below a <code>.card-divider</code>.
+        <p>This is another <code>.card-body</code>. It is below a <code>.card-divider</code>.</p>
       </div>
     </div>
 
@@ -98,13 +94,17 @@
       <div class="card-body">
         <h1 class="card-title">Buttons</h1>
         <p>Buttons and stuff below.</p>
-      </div>
 
-      <div class="card-body">
-        <a href="#" class="nui-button-flat-default">Default</a>
-        <a href="#" class="nui-button-flat-primary">Primary</a>
-        <a href="#" class="nui-button-raised-default">Default</a>
-        <a href="#" class="nui-button-raised-primary">Primary</a>
+        <h2 class="card-subtitle">Flat buttons</h2>
+        <p>
+          <a href="#" class="nui-button-flat-default">Default</a>
+          <a href="#" class="nui-button-flat-primary">Primary</a>
+        </p>
+        <h2 class="card-subtitle">Raised buttons</h2>
+        <p>
+          <a href="#" class="nui-button-raised-default">Default</a>
+          <a href="#" class="nui-button-raised-primary">Primary</a>
+        </p>
       </div>
     </div>
 
@@ -112,12 +112,17 @@
       <div class="card-body">
         <h1 class="card-title">Toggles</h1>
         <p>Sweet toggles and stuff</p>
-      </div>
 
-      <div class="card-body">
+        <h2 class="card-subtitle">"Unchecked" toggle</h2>
         <div class="nui-toggle">
-          <input  id="example-toggle-one" type="checkbox" />
-          <label class="toggle" for="example-toggle-one"></label>
+          <input  id="example-toggle-unchecked" type="checkbox" />
+          <label class="toggle" for="example-toggle-unchecked"></label>
+        </div>
+
+        <h2 class="card-subtitle">"Checked" toggle</h2>
+        <div class="nui-toggle">
+          <input  id="example-toggle-checked" type="checkbox" checked />
+          <label class="toggle" for="example-toggle-checked"></label>
         </div>
       </div>
     </div>
