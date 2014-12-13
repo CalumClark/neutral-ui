@@ -26,4 +26,42 @@ main {
   > .nui-card + .nui-card {
     margin-top: $vertical-margin;
   }
+
+  /* Cards(.html) page */
+  // Most of this section is just a temporary playground
+  // to help me decide how to abstract styles out.
+  &.cards {
+    > .card-custom {
+      margin: auto auto;
+      max-width: 500px;
+      margin-bottom: $vertical-margin;
+    }
+    .card-custom {
+      // Stash post variant
+      &.stash {
+        .card-overflow {
+          margin-top: $vertical-margin/2;
+          text-align: left; // TODO use $text-start and $text-end variables to accomedate LTR and RTL languages at some point
+
+          li {
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 1rem;
+
+            img {
+              border-radius: 100%;
+              vertical-align: text-bottom;
+            }
+            &.overflow {
+              float: right;
+              margin: 0 0 0 1rem;
+            }
+          }
+        }
+      }
+    }
+    .card-overflow {
+      text-align: right; // TODO use $text-start and $text-end variables to accomedate LTR and RTL languages at some point
+    }
+  }
 }

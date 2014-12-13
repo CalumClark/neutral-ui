@@ -73,61 +73,78 @@
       <!--TODO: Get new icons.. this menu icon needs improvement-->
       <span class="fa fa-bars"></span>
     </span>
-    <span class="toolbar-title">Toolbar</span>
+    <span class="toolbar-title">Cards</span>
   </div>
 
-  <main>
-    <div class="nui-card">
-      <div class="card-body">
-        <h1 class="card-title">Cards</h1>
-        <p>This is a <code>.card-body</code>. Above is a <code>.card-title</code>. Below is a <code>.card-divider</code>, then another <code>.card-body</code>.</p>
+  <!--
+    Most of this section is just a temporary playground
+    to help me decide how to abstract styles out.
+  -->
+  <main class="cards">
+    <div class="card-custom">
+      <div class="card-overflow">
+        <span class="fa fa-ellipsis-h"></span>
       </div>
-
-      <div class="card-divider"></div>
-
-      <div class="card-body">
-        <p>This is another <code>.card-body</code>. It is below a <code>.card-divider</code>.</p>
-      </div>
-
-      <div class="card-body">
-        <p>Find some more <code>.card</code>-play on the <a href="cards.html">cards page</a>.</p>
+      <div class="nui-card">
+        <div class="card-body">
+          <h1 class="card-title">Overflow card (above version)</h1>
+          <p>This is a custom card (a <code>.card</code> with a wrapper element).</p>
+          <p>It has an overflow menu added above it, a la Google Now.</p> The overflow can be moved 'below' the card too.
+        </div>
       </div>
     </div>
 
-    <div class="nui-card">
-      <div class="card-body">
-        <h1 class="card-title">Buttons</h1>
-        <p>Buttons and stuff below.</p>
-
-        <h2 class="card-subtitle">Flat buttons</h2>
-        <p>
-          <a href="#" class="nui-button-flat-default">Default</a>
-          <a href="#" class="nui-button-flat-primary">Primary</a>
-        </p>
-        <h2 class="card-subtitle">Raised buttons</h2>
-        <p>
-          <a href="#" class="nui-button-raised-default">Default</a>
-          <a href="#" class="nui-button-raised-primary">Primary</a>
-        </p>
+    <div class="card-custom">
+      <div class="nui-card">
+        <div class="card-body">
+          <h1 class="card-title">Overflow card (below version)</h1>
+          <p>This is a custom card (a <code>.card</code> with a wrapper element).</p>
+          <p>It has an overflow menu added below it.</p>
+        </div>
+      </div>
+      <div class="card-overflow">
+        <span class="fa fa-ellipsis-h"></span>
       </div>
     </div>
 
-    <div class="nui-card">
-      <div class="card-body">
-        <h1 class="card-title">Toggles</h1>
-        <p>Sweet toggles and stuff</p>
+    <hr />
+    <br />
 
-        <h2 class="card-subtitle">"Unchecked" toggle</h2>
-        <div class="nui-toggle">
-          <input  id="example-toggle-unchecked" type="checkbox" />
-          <label class="toggle" for="example-toggle-unchecked"></label>
+    <div class="card-custom stash">
+      <div class="nui-card">
+        <div class="card-body">
+          <h1 class="card-title">Custom card (Stash version)</h1>
+          <p>This is a custom card (a <code>.card</code> with a wrapper element).</p>
+          <p>It is styled after a <a href="http://stashhh.me/stashboxes/574/posts/3946">Stashhh.me post</a>.</p>
         </div>
+      </div>
+      <div class="card-overflow">
+        <ul>
+          <li class="overflow"><span class="fa fa-ellipsis-h"></span>
 
-        <h2 class="card-subtitle">"Checked" toggle</h2>
-        <div class="nui-toggle">
-          <input  id="example-toggle-checked" type="checkbox" checked />
-          <label class="toggle" for="example-toggle-checked"></label>
+          <li><img src="http://placehold.it/20px" />
+          <li><span class="fa fa-star"></span>
+          <li><span class="fa fa-comment"></span>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card-custom stash">
+      <div class="nui-card">
+        <div class="card-body">
+          <h1 class="card-title">Custom card (Stash version DUPLICATE)</h1>
+          <p>This is a custom card (a <code>.card</code> with a wrapper element).</p>
+          <p>It is styled after a <a href="http://stashhh.me/stashboxes/574/posts/3946">Stashhh.me post</a>.</p>
         </div>
+      </div>
+      <div class="card-overflow">
+        <ul>
+          <li class="overflow"><span class="fa fa-ellipsis-h"></span>
+
+          <li><img src="http://placehold.it/20px" />
+          <li><span class="fa fa-star"></span>
+          <li><span class="fa fa-comment"></span>
+        </ul>
       </div>
     </div>
   </main>
