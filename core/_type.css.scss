@@ -3,3 +3,12 @@
 body {
   font-size: $text-size;
 }
+code, pre {
+  font-family: monospace; // TODO variable-ize
+}
+code {
+  // TODO put more thought into styling code
+  padding: .25em;
+  background: lighten($text-color, 65%);
+  border-radius: $border-radius;
+}
