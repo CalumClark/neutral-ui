@@ -1,7 +1,7 @@
 @import "../variables";
 @import "../mixins/depth";
 
-@mixin toolbar($background: $card-light-background, $level: $depth-level-default) {
+@mixin toolbar($background: map-get($card, light-background), $level: $depth-level-default) {
   background: $background;
   padding: 0 $horizontal-margin;
   @include depth($level: $depth-level-default);

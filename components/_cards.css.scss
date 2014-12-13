@@ -1,7 +1,7 @@
 @import "../variables";
 @import "../mixins/depth";
 
-@mixin card($background: $card-light-background, $level: $depth-level-default) {
+@mixin card($background: map-get($card, light-background), $level: $depth-level-default) {
   overflow: hidden; // To reduce 'leakage' from children due to border-radius
   border-radius: $border-radius;
   background: $background;

@@ -11,8 +11,10 @@ $text-color: #444;
 $text-size: 16px; // TODO $font-size instead?
 
 /* Cards */
-$card-light-background: #fff;
-$card-dark-background: #212121;
+$card: (
+  light-background: #fff,
+  dark-background: #212121
+)
 
 /* Depth */
 $depth-level-default: 1; // TODO is "default" necessary here, or potentially confusing?
@@ -22,7 +24,7 @@ $depth-level-default: 1; // TODO is "default" necessary here, or potentially con
 $button-flat-default-hover-background: lighten($text-color, 60%); // TODO consistent color palette
 $button-flat-primary-hover-background: lighten($primary-color, 30%); // TODO consistent color palette
 // Raised
-$button-raised-default-background: $card-light-background; // TODO consistent color palette
+$button-raised-default-background: map-get($card, light-background); // TODO consistent color palette
 $button-raised-primary-background: $primary-color; // TODO consistent color palette
 $button-raised-default-hover-background: lighten($text-color, 60%); // TODO consistent color palette
 $button-raised-primary-hover-background: darken($primary-color, 10%); // TODO consistent color palette
