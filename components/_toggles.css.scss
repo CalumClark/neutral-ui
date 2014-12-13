@@ -20,6 +20,7 @@
           left: 100%;
           background: green;
           border-color: green;
+          transform: translateX(-100%);
         }
       }
     }
@@ -34,10 +35,9 @@
     width: 32px; // TODO best way to handle width? variable? calculation?
     height: $text-size; // TODO best way to handle width? variable? calculation?
 
-    // TODO fix the positioning... the ball doesn't slide equidistant/placement on to off.
     &::before, &::after {
       content: " ";
-      transition: all 400ms; // TODO variable-ize
+      transition: all 300ms; // TODO variable-ize
     }
     &::before {
       display: block;
