@@ -1,6 +1,7 @@
 @import "../variables";
 
 body {
+  font-family: Roboto, Arial, sans-serif;
   font-size: $text-size;
   line-height: 1.5;
 }
@@ -14,4 +15,17 @@ code {
   border-radius: $border-radius;
 }
 p {
+}
+h1, h2, h3, h4, h5, h6 {
+}
+a {
+  color: $primary-color;
+  font-weight: bold;
+  text-decoration: none;
+  &:hover {
+    color: lighten($primary-color, 10%);
+  }
+  &:active {
+    color: darken($primary-color, 10%);
+  }
 }
