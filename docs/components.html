@@ -69,11 +69,21 @@
 </head>
 <body>
   <div class="nui-toolbar">
-    <span class="toolbar-drawer-toggle">
+    <span class="toolbar-drawer-toggle" data-nui-drawer-toggle>
       <!--TODO: Get new icons.. this menu icon needs improvement-->
       <span class="fa fa-bars"></span>
     </span>
     <span class="toolbar-title">Toolbar</span>
+  </div>
+
+  <div class="nui-drawer" data-nui-drawer>
+    <div class="nui-toolbar">
+      <span class="toolbar-title">Drawer</span>
+    </div>
+    <br />
+    <p>this is a drawer. it DOES NOT CLOSE right now. Javascript components are on the TODO list.</p>
+    <br />
+    <img src="http://placehold.it/400">
   </div>
 
   <main>
@@ -131,5 +141,34 @@
       </div>
     </div>
   </main>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript">
+    // TODO don't inline, just make javascript components..
+    // As such, this will be *awful* JS.
+    var drawer;
+    var overlay ;
+
+    $(document).ready(function() {
+        $(document).on('click', '[data-nui-drawer-toggle]', function(e) {
+          // Don't jump the top of the page if the link is "#"
+          e.preventDefault();
+
+          // Set up our drawer-related elements
+          drawer = $('[data-nui-drawer]');
+          overlay = $('[data-nui-overlay]');
+
+          // Toggle the drawer when the button is clicked
+          drawer.toggleClass('open');
+          console.log("TOGGLE CLASS");
+
+          // Add an overlay if it's not here...
+          if (!overlay.length) {
+            drawer.parent().append('<div data-nui-overlay />');
+          }
+          // Toggle the overlay to display
+          overlay.toggleClass('open');
+        });
+    });
+  </script>
 </body>
 </html>
