@@ -1,0 +1,35 @@
+@import "../variables";
+@import "../mixins/depth";
+
+@mixin drawer($background: map-get($card, light-background), $level: $depth-level-default) {
+  position: absolute;
+  z-index: 1; // TODO better way? ... this keeps stuff (like toggles) from showing up.
+  top: 0;
+  bottom: 0;
+  left: 0;
+  max-width: 400px; // TODO variablize
+  background: $background;
+  transform: translateX(-100%);
+  transition: all 300ms;
+
+  // TODO horizontal depth! sounds fun.
+  //@include depth($level: $depth-level-default);
+
+  // TODO light and dark versions? (bg, text)
+
+  &.open {
+    transform: translateX(0);
+
+    ~ [data-nui-overlay] {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: rgba(#000, .2);
+    }
+  }
+}
+.nui-drawer {
+  @include drawer();
+}
